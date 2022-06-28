@@ -1,0 +1,38 @@
+<div>
+    
+    
+    <div id="content">
+        <table class ="table  table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th> Id</th>
+                    <th> User</th>
+                    <th> Serviciu</th>
+                    <th> Pachet </th>
+                    <th> Data programare</th>
+                    <th> Confirmare admin </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let programares of programare" >
+                    <td> {{ programares.id }} </td>
+                    <td> {{ programares.user.username }} </td>
+                    <td *ngIf="programares.serviciu_id !=null"> {{ programares.serviciu.nume}} </td>
+                    <td *ngIf="programares.serviciu_id ==null">A ales pachet</td>
+                    <td *ngIf="programares.pachet_id !=null"> {{ programares.pachet.servicii}} </td>
+                    <td *ngIf="programares.pachet_id ==null"> A ales serviciu</td>
+                    <td> {{ programares.data_programare }} </td>
+                    <td> {{ programares.confirmare}} </td>
+                    <td>
+                          <!-- <button (click) = "updateUser(users.id)" class = "btn btn-primary"> Update</button>
+                          <button (click) = "deleteUser(users.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button> -->
+                          
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    
+    
+
+</div>

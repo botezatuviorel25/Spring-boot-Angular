@@ -1,0 +1,68 @@
+
+<div class="wrapper">
+
+ 
+    <div class="row">
+      
+        <div class="card col-md-10 offset-md-1">
+          
+            <div class="row">
+                <h3 class="text-center"> Adauga Programare </h3>
+                <hr />
+                <div class="card-body">
+                    <form>
+                        <input type="checkbox" (change)="toggleEditable($event)"> Selectati pentru servciu
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label> Selectati Pachetul</label>
+                            <br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Pachet</mat-label>
+                                <mat-select [(value)]="selectedPachetID" [disabled]="contentEditable ? true : false">
+                                  <mat-option *ngFor="let pachets of pachet" [value]="pachets.id" (click)="fct()">
+                                      {{pachets.servicii}} 
+                                  </mat-option>
+                                  
+                               </mat-select>
+                              </mat-form-field> 
+                        </div>
+                        <div class="form-group" >
+                            <label> Selectati Serviciul</label>
+                            <br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Serviciu</mat-label>
+                                <mat-select [(value)]="selectedServiciuID" [disabled]="contentEditable ? false : true">
+                                  <mat-option  *ngFor="let servicius of serviciu" [value]="servicius.id" (click)="functie()">
+                                      {{servicius.nume}} 
+                                  </mat-option>
+                                  
+                               </mat-select>
+                              </mat-form-field> 
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Data programare</label>
+                            <input type="date" class="form-control" id="usern" [(ngModel)]="programare.data_programare"
+                                name="username">
+                              
+                        </div>
+                        <!-- <div class="form-group">
+                            <label> Confirmare admin</label>
+                            <input type="text" class="form-control" id="password" [(ngModel)]="programare.confirmare_admin"
+                                name="password">
+                        </div> -->
+                        
+                        <br><br>
+                        
+                        <br>
+                        <h3>TOTAL RON</h3>
+                        <h2 style="color:red; margin-top:0px">{{this.pretAfisare}}</h2>
+                        <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

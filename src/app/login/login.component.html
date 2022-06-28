@@ -1,0 +1,73 @@
+
+<!---
+<div>
+<h1>Login</h1>
+    <p>Username</p>
+    <input type="text" [(ngModel)]="username" />
+    <p>Password</p>
+    <input type="password"  [(ngModel)]="password"/>
+    <p></p>
+    <button (click)="logins()" type="submit">Login</button>  
+    <p></p>
+    <button (click)="logout()" type="submit">Logout</button>
+    <p></p>
+    <button (click)="getData()" type="submit">TEST API</button>
+    <p *ngIf="this.accesToken != null">Logat cu acces token: {{this.accesToken}}</p>
+    <p>{{this.data}}</p>
+
+<h3>{{this.handler}}</h3>
+</div>
+
+--->
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-3">
+          <img src="https://scontent.fsbz3-1.fna.fbcdn.net/v/t1.18169-9/27067400_1622487011171644_2905515917752863450_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeF7nezGTj7m169OKcikvqZifRfuN9lhNsF9F-432WE2wanjuApvsJJ2ZXY7vydcuk_u2qyHMqU_DH92oyZZ0IYi&_nc_ohc=MCI8VTNtgg0AX9G0C3p&_nc_ht=scontent.fsbz3-1.fna&oh=00_AT-XIuvK7v8nb-ANF_1RVYLDzTPpIc-TADLgEfF5euleOA&oe=62DD48DC"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-3 offset-xl-1">
+            
+            <div *ngIf = "this.warning==true" class="alert alert-danger" role="alert">
+                Date incorecte
+              </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="text" [(ngModel)]="this.username" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Introduceti un username valid"  (keyup.enter)=logins() />
+              <label class="form-label" for="form3Example3">Username</label>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" [(ngModel)]="this.password" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Introduceti parola" (keyup.enter)=logins()/>
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+  
+           
+              <button type="button" class="btn btn btn-danger btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="logins()">Login</button>
+                <p></p>
+              <button type="button" class="btn btn btn-danger btn-lg"
+                style="padding-left: 2.5rem; padding-right: 1.9rem; background-color: green;" (click)="singin()">Sign in</button>
+            
+  
+            
+          
+        </div>
+      </div>
+    </div>
+    
+    <!---
+    <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div>
+      
+    </div>
+    --->
+  </section>

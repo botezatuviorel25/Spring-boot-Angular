@@ -1,0 +1,36 @@
+
+<div class="wrapper">
+
+ 
+    <div class="row">
+      
+        <div class="card col-md-10 offset-md-1">
+          
+            <div class="row">
+                <h3 class="text-center"> Create Pachet </h3>
+                <hr />
+                <div class="card-body">
+                    <form>
+    
+                        <div class="form-group">
+                            <label>Pret</label>
+                            <input type="text" class="form-control" id="usern" [(ngModel)]="pachet.pret"
+                                name="username">
+                              
+                        </div>
+                        <div class="form-group">
+                            <label> Servicii</label>
+                            <input type="text" class="form-control" id="password" [(ngModel)]="pachet.servicii"
+                                name="password">
+                        </div>
+                        
+                        <br><br>
+                        
+                        <br />
+                        <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

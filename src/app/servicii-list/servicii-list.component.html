@@ -1,0 +1,32 @@
+<div>
+    
+    
+    <div id="content">
+        <table class ="table  table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th> Id</th>
+                    <th> Nume</th>
+                    <th> Pret</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let servicius of serviciu" >
+                    <td> {{ servicius.id }} </td>
+                    <td> {{ servicius.nume }} </td>
+                    <td> {{ servicius.pret }} </td>
+                    
+                    <td>
+                          <!-- <button (click) = "updateUser(users.id)" class = "btn btn-primary"> Update</button>
+                          <button (click) = "deleteUser(users.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button> -->
+                          
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    
+    
+
+</div>
